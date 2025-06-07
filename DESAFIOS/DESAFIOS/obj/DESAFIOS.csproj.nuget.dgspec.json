@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\botiv\\Desktop\\Desafios-C-\\DESAFIOS\\DESAFIOS\\DESAFIOS.csproj": {}
+    "C:\\Users\\etec\\Source\\Repos\\DesafiosCsharp\\DESAFIOS\\DESAFIOS\\DESAFIOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\botiv\\Desktop\\Desafios-C-\\DESAFIOS\\DESAFIOS\\DESAFIOS.csproj": {
+    "C:\\Users\\etec\\Source\\Repos\\DesafiosCsharp\\DESAFIOS\\DESAFIOS\\DESAFIOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\botiv\\Desktop\\Desafios-C-\\DESAFIOS\\DESAFIOS\\DESAFIOS.csproj",
+        "projectUniqueName": "C:\\Users\\etec\\Source\\Repos\\DesafiosCsharp\\DESAFIOS\\DESAFIOS\\DESAFIOS.csproj",
         "projectName": "DESAFIOS",
-        "projectPath": "C:\\Users\\botiv\\Desktop\\Desafios-C-\\DESAFIOS\\DESAFIOS\\DESAFIOS.csproj",
-        "packagesPath": "C:\\Users\\botiv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\botiv\\Desktop\\Desafios-C-\\DESAFIOS\\DESAFIOS\\obj\\",
+        "projectPath": "C:\\Users\\etec\\Source\\Repos\\DesafiosCsharp\\DESAFIOS\\DESAFIOS\\DESAFIOS.csproj",
+        "packagesPath": "C:\\Users\\etec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\etec\\Source\\Repos\\DesafiosCsharp\\DESAFIOS\\DESAFIOS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\botiv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\etec\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

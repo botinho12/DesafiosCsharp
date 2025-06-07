@@ -1,4 +1,5 @@
-﻿using DESAFIOS.Entities;
+﻿using System.Globalization;
+using DESAFIOS.Entities;
 
 internal class Program
 {
@@ -13,28 +14,87 @@ internal class Program
         Console.WriteLine("");
         Console.WriteLine("");
 
-        int NumeroDigitado = int.Parse(Console.ReadLine());
 
-        if (NumeroDigitado == 1)
+        try
         {
-            var desafio = new SomaNumeros();
-            desafio.somaNumeros();
+            int NumeroDigitado = int.Parse(Console.ReadLine());
+
+            if (NumeroDigitado == 1)
+            {
+                var desafio = new SomaNumeros();
+                desafio.somaNumeros();
+            }
+            else if (NumeroDigitado == 2)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Informe sua Altura");
+                string alturaStr = Console.ReadLine().Replace(',', '.');
+                double altura = double.Parse(alturaStr, CultureInfo.InvariantCulture);
+
+                Console.WriteLine("");
+                Console.WriteLine("Informe seu peso");
+                string pesoStr = Console.ReadLine().Replace(',', '.');
+                double peso = double.Parse(pesoStr, CultureInfo.InvariantCulture);
+                Console.WriteLine("");
+
+
+                var desafio2 = new CalculaImc(altura, peso);
+                desafio2.calculaImc();
+            }
+            else if (NumeroDigitado == 3)
+            {
+                Console.WriteLine("Digite qual operação deseja executar: Subtração (-), Adição (+), Divisão (/) ou Multiplicação (*)");
+                string operador = Console.ReadLine();
+                Console.WriteLine();
+
+                Console.WriteLine("Digite dois números:");
+                Console.Write("Primeiro número: ");
+                string numero1Str = Console.ReadLine().Replace(',', '.');
+                double numero1 = double.Parse(numero1Str, CultureInfo.InvariantCulture);
+
+                Console.Write("Segundo número: ");
+                string numero2Str = Console.ReadLine().Replace(',', '.');
+                double numero2 = double.Parse(numero2Str, CultureInfo.InvariantCulture);
+
+                var desafio3 = new Calculadora(numero1, numero2);
+                double resultado;
+
+                switch (operador)
+                {
+                    case "+":
+                        resultado = desafio3.Soma();
+                        Console.WriteLine($"Resultado da soma: {resultado}");
+                        break;
+
+                    case "-":
+                        resultado = desafio3.Subtract();
+                        Console.WriteLine($"Resultado da subtração: {resultado}");
+                        break;
+
+                    case "*":
+                        resultado = desafio3.multiplicacao();
+                        Console.WriteLine($"Resultado da multiplicação: {resultado}");
+                        break;
+
+                    case "/":
+                        if (numero2 == 0)
+                            Console.WriteLine("Erro: divisão por zero.");
+                        else
+                        {
+                            resultado = desafio3.Divisao();
+                            Console.WriteLine($"Resultado da divisão: {resultado}");
+                        }
+                        break;
+
+                    default:
+                        Console.WriteLine("Operador inválido.");
+                        break;
+                }
+            }
         }
-        else if (NumeroDigitado == 2)
+        catch
         {
-            Console.WriteLine("");
-            Console.WriteLine("Informe sua Altura");
-            double altura = double.Parse(Console.ReadLine());
-            Console.WriteLine("");
-            Console.WriteLine("Informe seu peso");
-            double peso = double.Parse(Console.ReadLine());
-            Console.WriteLine("");
-
-
-            var desafio2 = new CalculaImc(altura,peso);
-            desafio2.calculaImg();
+            Console.WriteLine("Valor invalido");
         }
-
-
     }
-}   
+}

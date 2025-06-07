@@ -2,17 +2,18 @@
 {
     public class CalculaImc
     {
-        public double Peso { get; set; }
         public double Altura { get; set; }
+        public double Peso { get; set; }
 
-        public CalculaImc(double peso, double altura)
+
+        public CalculaImc(double altura, double peso)
         {
-            Peso = peso;
             Altura = altura;
+            Peso = peso;    
         }
 
 
-        public double calculaImg()
+        public double calculaImc()
         {
             double imc = Peso / (Altura * Altura);
             Console.WriteLine($"Seu IMC é: {imc:F2}");
